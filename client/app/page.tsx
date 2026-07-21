@@ -44,7 +44,7 @@ export default function Page() {
         </button>
         {categories.map((category, index) => (
           <button
-            className="px-2 rounded-md bg-stone-200 hover:bg-stone-300 duration-300 cursor-pointer"
+            className={`${selectedCategory === category ? "bg-stone-300" : "bg-stone-200"} px-2 rounded-md hover:bg-stone-300 duration-300 cursor-pointer`}
             key={index}
             onClick={() => setSelectedCategory(category)}
           >
