@@ -31,7 +31,7 @@ const listings: Listing[] = [
 ];
 
 export default function Page() {
-  const [selectedCategory, setSelectedCategory] = useState<string>("Flat");
+  const [selectedCategory, setSelectedCategory] = useState<string>("");
 
   return (
     <div className="p-3 mx-auto max-w-md w-full flex flex-col gap-3">
