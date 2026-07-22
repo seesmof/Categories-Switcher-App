@@ -2,16 +2,19 @@
 
 import { useEffect } from "react";
 
-const BiblePlaces = ["2 Corinthians 5:17"];
+const BiblePlaces = ["2 Corinthians 5:17", "Romans 8:13", "Romans 12:14"];
 
 const apiUrl = "https://open-bible-api.vercel.app";
 
 const fetchVerse = async (BiblePlace: string) => {
   const [BookAndChapter, verseNumber] = BiblePlace.split(":");
-  for (let i = BookAndChapter.length; i > 0; i--) {
+  let chapter = "";
+  for (let i = BookAndChapter.length - 1; i > 0; i--) {
     const place = BookAndChapter[i];
-    console.log(place);
+    if (place === " ") break;
+    chapter += place;
   }
+  console.log(chapter);
 
   // const response = await fetch(`${apiUrl}/`);
 };
